@@ -1,0 +1,27 @@
+---
+title: "Midterm Exam"
+author: "Diana Marcela Beltrán Pedroza"
+date: "2025-10-09"
+output: html_document
+---
+
+
+```{r message=FALSE, warning=FALSE}
+library(aod)
+library(dplyr)
+library(tidyverse)
+```
+
+
+```{r}
+msleep <- glimpse(msleep)
+storms <- storms
+lizards <-lizards
+```
+
+```{r}
+head(msleep)
+head(storms)
+head(lizards)
+```
+

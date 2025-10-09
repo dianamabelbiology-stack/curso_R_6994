@@ -67,7 +67,7 @@ Laboratories*
 
 ### [practica en clase](Assigments/Cereales.html)
 
-### [test](Assigments/test.html)
+### [Mid-term](Midterm_Exam.html)
 
 ## Ensayo de hoy 
 
