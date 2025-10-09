@@ -40,3 +40,12 @@ msleep %>%
 
 ```
 
+**Q2. Usa mutate() para crear una nueva columna llamada percent_day_awake que muestre el porcentaje del día que cada especie permanece despierta. Usa select() con everything() al final para comprobar que tus cálculos son correctos.**
+
+```{r}
+msleep %>% 
+  mutate(percent_day_awake = ((awake  / 24) * 100)) %>% 
+  select(percent_day_awake, everything())
+
+```
+

@@ -433,6 +433,29 @@ horas al día.</strong></p>
 ## 10 Afric… Cric… omni  Rode… &lt;NA&gt;                 8.3       2        NA      15.7
 ## # ℹ 42 more rows
 ## # ℹ 2 more variables: brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;</code></pre>
+<p><strong>Q2. Usa mutate() para crear una nueva columna llamada
+percent_day_awake que muestre el porcentaje del día que cada especie
+permanece despierta. Usa select() con everything() al final para
+comprobar que tus cálculos son correctos.</strong></p>
+<pre class="r"><code>msleep %&gt;% 
+  mutate(percent_day_awake = ((awake  / 24) * 100)) %&gt;% 
+  select(percent_day_awake, everything())</code></pre>
+<pre><code>## # A tibble: 83 × 12
+##    percent_day_awake name   genus vore  order conservation sleep_total sleep_rem
+##                &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;
+##  1              49.6 Cheet… Acin… carni Carn… lc                  12.1      NA  
+##  2              29.2 Owl m… Aotus omni  Prim… &lt;NA&gt;                17         1.8
+##  3              40   Mount… Aplo… herbi Rode… nt                  14.4       2.4
+##  4              37.9 Great… Blar… omni  Sori… lc                  14.9       2.3
+##  5              83.3 Cow    Bos   herbi Arti… domesticated         4         0.7
+##  6              40   Three… Brad… herbi Pilo… &lt;NA&gt;                14.4       2.2
+##  7              63.8 North… Call… carni Carn… vu                   8.7       1.4
+##  8              70.8 Vespe… Calo… &lt;NA&gt;  Rode… &lt;NA&gt;                 7        NA  
+##  9              57.9 Dog    Canis carni Carn… domesticated        10.1       2.9
+## 10              87.5 Roe d… Capr… herbi Arti… lc                   3        NA  
+## # ℹ 73 more rows
+## # ℹ 4 more variables: sleep_cycle &lt;dbl&gt;, awake &lt;dbl&gt;, brainwt &lt;dbl&gt;,
+## #   bodywt &lt;dbl&gt;</code></pre>
 </div>
 
 
