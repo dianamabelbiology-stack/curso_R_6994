@@ -49,3 +49,14 @@ msleep %>%
 
 ```
 
+
+## Storm tracks data (storms)
+
+**Q3 Use group_by() and summarise() to calculate the number of storms per year. Agrupa los datos por año y calcula el número de tormentas que ocurrieron cada año.** 
+
+```{r}
+storms %>% 
+  group_by(year) %>% 
+  summarise(num_storms = n())
+```
+

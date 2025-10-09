@@ -457,6 +457,29 @@ comprobar que tus cálculos son correctos.</strong></p>
 ## # ℹ 4 more variables: sleep_cycle &lt;dbl&gt;, awake &lt;dbl&gt;, brainwt &lt;dbl&gt;,
 ## #   bodywt &lt;dbl&gt;</code></pre>
 </div>
+<div id="storm-tracks-data-storms" class="section level2">
+<h2>Storm tracks data (storms)</h2>
+<p><strong>Q3 Use group_by() and summarise() to calculate the number of
+storms per year. Agrupa los datos por año y calcula el número de
+tormentas que ocurrieron cada año.</strong></p>
+<pre class="r"><code>storms %&gt;% 
+  group_by(year) %&gt;% 
+  summarise(num_storms = n())</code></pre>
+<pre><code>## # A tibble: 48 × 2
+##     year num_storms
+##    &lt;dbl&gt;      &lt;int&gt;
+##  1  1975        238
+##  2  1976        126
+##  3  1977         92
+##  4  1978        152
+##  5  1979        324
+##  6  1980        335
+##  7  1981        311
+##  8  1982        111
+##  9  1983         88
+## 10  1984        342
+## # ℹ 38 more rows</code></pre>
+</div>
 
 
 
