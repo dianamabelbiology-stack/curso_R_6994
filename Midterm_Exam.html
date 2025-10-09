@@ -407,6 +407,33 @@ lizards &lt;-lizards</code></pre>
 ## 4  Sun   D &lt;= 2 H &gt;= 5   Early      13        0
 ## 5  Sun   D &lt;= 2 H &gt;= 5 Mid-day       8        0
 ## 6  Sun   D &lt;= 2 H &gt;= 5    Late      12        0</code></pre>
+<div id="inicio-de-examen" class="section level2">
+<h2>INICIO DE EXAMEN</h2>
+<p><strong>Q1. Use filter() to subset msleep to only animals who are
+awake for at least 12 hours of the day. Usa filter() para seleccionar
+del dataset msleep solo los animales que están despiertos al menos 12
+horas al día.</strong></p>
+<pre class="r"><code>class(msleep)</code></pre>
+<pre><code>## [1] &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+<p>Question 1</p>
+<pre class="r"><code>msleep %&gt;% 
+  filter(awake &gt;= 12)</code></pre>
+<pre><code>## # A tibble: 52 × 11
+##    name   genus vore  order conservation sleep_total sleep_rem sleep_cycle awake
+##    &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;
+##  1 Cow    Bos   herbi Arti… domesticated         4         0.7       0.667  20  
+##  2 North… Call… carni Carn… vu                   8.7       1.4       0.383  15.3
+##  3 Vespe… Calo… &lt;NA&gt;  Rode… &lt;NA&gt;                 7        NA        NA      17  
+##  4 Dog    Canis carni Carn… domesticated        10.1       2.9       0.333  13.9
+##  5 Roe d… Capr… herbi Arti… lc                   3        NA        NA      21  
+##  6 Goat   Capri herbi Arti… lc                   5.3       0.6      NA      18.7
+##  7 Guine… Cavis herbi Rode… domesticated         9.4       0.8       0.217  14.6
+##  8 Grivet Cerc… omni  Prim… lc                  10         0.7      NA      14  
+##  9 Star-… Cond… omni  Sori… lc                  10.3       2.2      NA      13.7
+## 10 Afric… Cric… omni  Rode… &lt;NA&gt;                 8.3       2        NA      15.7
+## # ℹ 42 more rows
+## # ℹ 2 more variables: brainwt &lt;dbl&gt;, bodywt &lt;dbl&gt;</code></pre>
+</div>
 
 
 

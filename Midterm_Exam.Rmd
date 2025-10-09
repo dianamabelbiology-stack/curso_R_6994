@@ -25,3 +25,18 @@ head(storms)
 head(lizards)
 ```
 
+## INICIO DE EXAMEN
+
+**Q1. Use filter() to subset msleep to only animals who are awake for at least 12 hours of the day. Usa filter() para seleccionar del dataset msleep solo los animales que están despiertos al menos 12 horas al día.** 
+
+```{r}
+class(msleep)
+```
+
+Question 1
+```{r}
+msleep %>% 
+  filter(awake >= 12)
+
+```
+
