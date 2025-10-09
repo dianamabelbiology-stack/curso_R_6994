@@ -1,0 +1,86 @@
+---
+title: "Homework1"
+author: "Diana Marcela Beltrán Pedroza"
+date: "2025-09-04"
+output: html_document
+---
+## Assigning values
+
+**Q1. Create an object called height with the value 175. Print it. (Crea un objeto llamado height con el valor 175. Muéstralo en pantalla.)**
+
+```{r}
+Altura <- 175
+Altura
+```
+## Simple math
+
+**Q2. Calculate the result of 25 * 4 - 10. (Calcula el resultado de 25 * 4 - 10.)**
+```{r}
+25 * 4 - 10
+```
+## Using functions
+
+**Q3. Use the function sqrt() to calculate the square root of 81. (Usa la función sqrt() para calcular la raíz cuadrada de 81.)** 
+```{r}
+sqrt(81)
+```
+## Character objects
+
+**Q4. Assign the phrase “R is fun!” to an object called message. Print it. (Asigna la frase “R is fun!” a un objeto llamado message. Muéstralo.)**
+
+```{r}
+my_obj1 <- "R is fun"
+my_obj1
+
+```
+## Object manipulation
+
+**Q5. Create two objects a <- 10 and b <- 5. Calculate their sum and store it in c. (Crea dos objetos a <- 10 y b <- 5. Calcula su suma y guárdala en c.)**
+
+```{r}
+a <- 10
+b <- 5
+c <- a + b
+c
+```
+## Logical comparison
+
+**Q6. Test whether 15 is greater than 20. (Verifica si 15 es mayor que 20.)**
+
+
+```{r}
+15 > 20
+```
+
+```{r}
+class("Hello world")
+```
+
+```{r}
+##log(-1)
+```
+
+
+```{r}
+##log(-1)
+```
+
+
+
+```{r}
+##library(dplyr)
+```
+```{r}
+##library(dplyr)
+```
+
+```{r}
+?mean()
+```
+
+
+
+
+
+
+

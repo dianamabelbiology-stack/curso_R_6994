@@ -1,0 +1,79 @@
+---
+title: "Cereales"
+author: "Diana Marcela Beltrán Pedroza"
+date: "2025-09-30"
+output: pdf_document
+---
+
+
+```{r}
+# install.packages("readxl")
+library(readxl)
+library(dplyr)
+
+```
+```{r}
+cereal <- read_excel("cereal.xlsx")
+head(cereal)
+
+
+```
+**Q1 Extract rows 1 to 10 from the cereal data frame. (Extraiga las filas 1 a 10 del marco de datos cereal.)**
+
+```{r}
+cereal[1:10, ]
+
+```
+**Q2**
+
+```{r}
+# data frane
+
+Kelloggs <- cereal[cereal$company == "K",]
+head(Kelloggs)
+
+```
+**Q3**
+
+```{r}
+
+cereal[cereal$sugars > 10, "name"]
+```
+ **Q4**
+ 
+```{r}
+
+mean(cereal$calories)
+```
+ **Q5**
+ 
+```{r}
+subset(cereal, fiber >= 2)
+```
+ 
+ **New practice **
+ 
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+EquationCitations <- read.csv("EquationCitations.csv")
+head(EquationCitations)
+```
+ 
+ **Q1 On average, how many equations per article are published in each journal? (Hint: use group_by() and summarise())** 
+ 
+```{r}
+EquationCitations %>%
+  group_by (journal) %>%
+  summarize(promedio = mean(equations))
+```
+ 
+ 
+**Q2 For each journal, calculate the average proportion of theoretical citations relative to total citations. (Hint: create a new column with mutate(theo_ratio = theocites / cites), then group_by() and summarise())**
+## Para cada revista, calcule la proporción promedio de citas teóricas respecto al total de citas. (Sugerencia: cree una nueva columna con mutate(theo_ratio = theocites / cites), luego group_by() y summarise())
+
+```{r}
+EquationCitations %>%
+  mutate(theo_ratio = theocites / cites) %>% 
+  group_by(journal) %>% 
+  summarise(citaspromedio = mean(theo_ratio))
+```
+

@@ -1,0 +1,167 @@
+---
+title: "Homework 2"
+author: "Diana Marcela Beltrán Pedroza"
+date: "2025-09-15"
+output: html_document
+---
+**Q1**
+
+BOD_df <- as.data.frame(BOD)# BOD (Biochemical Oxygen Demand) is pre-defined Vector in R.
+
+BOD_df
+
+
+        Time    demand  
+    1      1       8.3 
+    2      2      10.3 
+    3      3      19.0 
+    4      4      16.0  
+    5      5      15.5 
+    6      7      19.8 
+
+**Q2**
+
+df1=data.frame(
+ "Name"=c("a","b","c","d"),
+ "Age"=c(12,34,23,67), 
+ "BMI"=c(22,12,10,11),
+ "Country"=c("Malaysia","India","Spain","England"))
+print(df1)
+
+         Name   Age   BMI   Country   
+      1     a    12    22   Malasia   
+      2     b    34    12    India
+      3     c    23    10    Spain 
+      4     d    67    11   England 
+class(df1)
+
+**Q3**
+
+df=data.frame(
+  A=c("Raju","Kumar","Chandru","Deepak","Raina", "Dhoni", "Hema", "Vandana", "Bela","Anand" ),
+  B=c(12,34,23,67,23,43,23,38,34,12),
+  C=c("M","M","M","M","M","M","F","F","F","M"),
+  D=c("Malaysia","India","Spain","England", "Malaysia", "Malaysia", "India", "Egypt", "Italy", "Peru"))
+  
+names(df)<-c("Name", "Age", "Gender","Country" )
+print(df)
+
+            Name  Age   Gender    Country 
+      1     Raju   12        M    Malaysia
+      2    Kumar   34        M       India 
+      3  Chandru   23        M       Spain 
+      4   Deepak   67        M     England 
+      5    Raina   23        M    Malaysia 
+      6    Dhoni   43        M    Malaysia
+      7     Hema   23        F       India
+      8  Vandana   38        F       Egypt 
+      9     Bela   34        F       Italy 
+      10   Anand   12        M        Peru
+      
+class(df)
+
+
+**Q4**
+
+subset<- df[ ,  1:2]
+
+subset
+
+**Q5**
+
+df[order(df$Age), ]
+
+          Name Age Gender  Country 
+    1     Raju  12      M Malaysia 
+    10   Anand  12      M     Peru 
+    3  Chandru  23      M    Spain 
+    5    Raina  23      M Malaysia 
+    7     Hema  23      F    India 
+    2    Kumar  34      M    India 
+    9     Bela  34      F    Italy 
+    8  Vandana  38      F    Egypt 
+    6    Dhoni  43      M Malaysia 
+    4   Deepak  67      M  England
+
+**Q6**
+
+df$Score <- c(85, 90, 78, 88, 90, 92, 80, 90, 87, 100)
+df
+
+            Name Age Gender  Country Score 
+      1     Raju  12      M Malaysia    85 
+      2    Kumar  34      M    India    90 
+      3  Chandru  23      M    Spain    78 
+      4   Deepak  67      M  England    88  
+      5    Raina  23      M Malaysia    90  
+      6    Dhoni  43      M Malaysia    92 
+      7     Hema  23      F    India    80 
+      8  Vandana  38      F    Egypt    90 
+      9     Bela  34      F    Italy    87 
+      10   Anand  12      M     Peru   100
+      
+      
+**Q7**
+
+subset(df, Age > 30)
+
+         Name Age Gender  Country Score 
+    2   Kumar  34      M    India    90 
+    4  Deepak  67      M  England    88 
+    6   Dhoni  43      M Malaysia    92 
+    8 Vandana  38      F    Egypt    90 
+    9    Bela  34      F    Italy    87
+
+subset
+
+**Q8**
+
+colnames(df) <- c("Name (Person)", "Age (Years)", "Gender", "Country (Nation)", "Score")
+df
+
+       Name (Person) Age (Years) Gender 
+    1           Raju          12      M 
+    2          Kumar          34      M 
+    3        Chandru          23      M 
+    4         Deepak          67      M 
+    5          Raina          23      M 
+    6          Dhoni          43      M 
+    7           Hema          23      F 
+    8        Vandana          38      F 
+    9           Bela          34      F 
+    10         Anand          12      M 
+        Country (Nation) Score  
+     1          Malaysia    85 
+     2             India    90 
+     3             Spain    78 
+     4           England    88 
+     5          Malaysia    90 
+     6          Malaysia    92 
+     7             India    80 
+     8             Egypt    90 
+     9             Italy    87 
+     10             Peru   100
+
+print(df)
+
+**Q9**
+
+subset(df1, Age > 20 & BMI < 15)
+
+      Name Age BMI Country 
+    2    b  34  12   India 
+    3    c  23  10   Spain 
+    4    d  67  11 England
+    
+    
+**Q10**
+
+mean(df1$Age)
+
+     [1] 34
+     
+print(mean(df1$Age))
+     
+**fin**
+     
+

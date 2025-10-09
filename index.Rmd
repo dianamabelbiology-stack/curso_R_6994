@@ -1,0 +1,73 @@
+---
+title: "Practica 1"
+author: "Diana Marcela Beltrán Pedroza"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+# Course Introduction R and RStudio
+ R is a **free** and **open source** software environment and programming language for statistics.<br>
+ R was created by Ross Ihaka and Robert Gentleman at the University of Auckland (in New
+Zealand), and is based on the S language that was created by *John Chambers at Bell
+Laboratories*
+<br>
+<br>
+<br>
+
+
+## Shopping List
+
+- fruits
+  * Apple
+  * Oranges
+  * Grapes
+- Dairy
+  * Milk
+  * Cheese
+  
+## To-do list
+1. Finish Markdown tutorial
+2. Go to grocery store
+3. Prepare lunch
+
+## Lugar de Trabajo
+
+[Tropical Crops and Germplasm Research: Mayaguez,Pr-TARS](https://www.ars.usda.gov/southeast-area/mayaguez-pr/tropical-crops-and-germplasm-research/docs/main/)
+
+## Foto Familiar
+
+![](imagenes/foto-jomyr.jpg)
+
+## Tables
+
+| Heading 1 | Heading 2 | Heading 3 |
+| --------- | --------- | --------- |
+| Row 1, column 1 | Row 1, column 2 | Row 1, column 3|
+| Row 2, column 1 | Row 2, column 2 | Row 2, column 3|
+| Row 3, column 1 | Row 3, column 2 | Row 3, column 3|
+
+## Tabla 2
+
+| Left-aligned | Centered | Right-aligned |
+| :-------- | :-------: | --------: |
+| Apples | Red | 5000 |
+| Bananas | Yellow | 75 |
+
+
+
+## Assigments
+
+### [Homework 1](Assigments/Homework-1.html)
+
+### [Homework 2](Assigments\Homework-2.html)
+
+### [Homework 3](Assigments\Homework-3.html)
+
+### [practica en clase](Assigments/Cereales.html)
+
+### [test](Assigments/test.html)
+
+## Ensayo de hoy 
+

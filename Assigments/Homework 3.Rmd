@@ -1,0 +1,176 @@
+---
+title: "Homework 3"
+author: "Diana Marcela Beltrán Pedroza"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output: html_document
+---
+
+install.packages("gapminder")
+
+install.packages("dplyr")
+
+library(dplyr)
+
+library(gapminder)
+
+data(gapminder)
+head(gapminder)
+
+      country     continent  year lifeExp 
+      <fct>       <fct>     <int>   <dbl> 
+    1 Afghanistan Asia       1952    28.8 
+    2 Afghanistan Asia       1957    30.3 
+    3 Afghanistan Asia       1962    32.0 
+    4 Afghanistan Asia       1967    34.0 
+    5 Afghanistan Asia       1972    36.1 
+    6 Afghanistan Asia       1977    38.4 
+    
+**Q1**
+
+class(gapminder)
+
+    [1] "tbl_df"     "tbl" 
+    [3] "data.frame"
+    
+
+**Q2**
+
+gapminder %>% 
+  filter(lifeExp < 29)
+  
+      country     continent  year lifeExp     pop gdpPercap 
+      <fct>       <fct>     <int>   <dbl>   <int>     <dbl> 
+    1 Afghanistan Asia       1952    28.8 8425333      779.
+    2 Rwanda      Africa     1992    23.6 7290203      737.
+
+**Q3**
+
+gapminder %>% 
+  filter(country == 'Rwanda', year > 1979)
+  head(starwars, 3)
+
+      country continent  year lifeExp 
+      <fct>   <fct>     <int>   <dbl>
+    1 Rwanda  Africa     1982    46.2 
+    2 Rwanda  Africa     1987    44.0 
+    3 Rwanda  Africa     1992    23.6 
+    4 Rwanda  Africa     1997    36.1 
+    5 Rwanda  Africa     2002    43.4 
+    6 Rwanda  Africa     2007    46.2
+    
+    
+**Q4**
+
+gapminder %>% 
+select(-gdpPercap) 
+
+
+
+       country     continent  year lifeExp 
+       <fct>       <fct>     <int>   <dbl> 
+     1 Afghanistan Asia       1952    28.8 
+     2 Afghanistan Asia       1957    30.3 
+     3 Afghanistan Asia       1962    32.0 
+     4 Afghanistan Asia       1967    34.0 
+     5 Afghanistan Asia       1972    36.1 
+     6 Afghanistan Asia       1977    38.4 
+     
+     
+
+**Q5** 
+
+
+df_ordenado <- gapminder %>% 
+arrange(lifeExp)
+head(gapminder, 6)
+
+         country     continent  year lifeExp 
+         <fct>       <fct>     <int>   <dbl> 
+       1 Afghanistan Asia       1952    28.8 
+       2 Afghanistan Asia       1957    30.3 
+       3 Afghanistan Asia       1962    32.0 
+       4 Afghanistan Asia       1967    34.0 
+       5 Afghanistan Asia       1972    36.1 
+       6 Afghanistan Asia       1977    38.4
+     
+
+**Q6**
+
+gapminder %>% 
+arrange(desc(lifeExp))
+head(gapminder, 6)
+
+      country      continent  year lifeExp 
+      <fct>        <fct>     <int>   <dbl>
+    1 Japan        Asia       2007    82.6 
+    2 Hong Kong, … Asia       2007    82.2 
+    3 Japan        Asia       2002    82  
+    4 Iceland      Europe     2007    81.8 
+    5 Switzerland  Europe     2007    81.7 
+    6 Hong Kong, … Asia       2002    81.5
+    
+**Q7** 
+
+
+
+gapminder %>% 
+select(year, lifeExp)
+
+       year lifeExp
+       <int>   <dbl> 
+    1  1952    28.8 
+    2  1957    30.3 
+    3  1962    32.0 
+    4  1967    34.0 
+    5  1972    36.1 
+    6  1977    38.4
+    
+**Q8** 
+
+gapminder %>% 
+filter(country == "Cambodia") %>% select(year, lifeExp)
+
+       year lifeExp 
+       <int>   <dbl> 
+    1  1952    39.4 
+    2  1957    41.4 
+    3  1962    43.4 
+    4  1967    45.4 
+    5  1972    40.3 
+    6  1977    31.2 
+    7  1982    51.0
+
+
+**Q9**
+
+gapminder %>%
+filter(continent == "Africa")
+
+      country continent  year lifeExp
+      <fct>   <fct>     <int>   <dbl>
+    1 Algeria Africa     1952    43.1 
+    2 Algeria Africa     1957    45.7 
+    3 Algeria Africa     1962    48.3 
+    4 Algeria Africa     1967    51.4 
+    5 Algeria Africa     1972    54.5 
+    6 Algeria Africa     1977    58.0
+
+
+**Q10**
+
+gapminder <- gapminder %>% mutate(lifeExp_months = lifeExp * 12)
+
+      country     continent  year lifeExp      pop gdpPercap lifeExp_months
+      <fct>       <fct>     <int>   <dbl>    <int>     <dbl>          <dbl> 
+    1 Afghanistan Asia       1952    28.8  8425333      779.           346.
+    2 Afghanistan Asia       1957    30.3  9240934      821.           364.
+    3 Afghanistan Asia       1962    32.0 10267083      853.           384.
+    4 Afghanistan Asia       1967    34.0 11537966      836.           408.
+    5 Afghanistan Asia       1972    36.1 13079460      740.           433.
+    6 Afghanistan Asia       1977    38.4 14880372      786.           461.
+    7 Afghanistan Asia       1982    39.9 12881816      978.           478. 
+    8 Afghanistan Asia       1987    40.8 13867957      852.           490.
+    9 Afghanistan Asia       1992    41.7 16317921      649.           500. 
+
+
+**fin** 
