@@ -1,5 +1,5 @@
 ---
-title: "Midterm Exam"
+title: "Midterm Exam1"
 author: "Diana Marcela Beltrán Pedroza"
 date: "2025-10-09"
 output: html_document
