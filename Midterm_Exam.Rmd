@@ -68,3 +68,15 @@ storms %>%
   arrange(desc(wind))
 ```
 
+## A Comparison of Site Preferences of Two Species of Lizard (lizards)
+
+**Q5 Determine which Site and Diameter combination has the highest total grahami. Determina cuál combinación de Sitio y Diámetro tiene el total de grahami más alto.**
+
+```{r}
+lizards %>%
+  group_by(Site, Diameter) %>%
+  summarise(total_grahami = sum(grahami)) %>% 
+  arrange(desc(total_grahami))
+  
+```
+

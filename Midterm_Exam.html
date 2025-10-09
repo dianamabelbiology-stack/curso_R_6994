@@ -504,6 +504,27 @@ a menor velocidad de viento.</strong></p>
 ## # ℹ 2 more variables: tropicalstorm_force_diameter &lt;int&gt;,
 ## #   hurricane_force_diameter &lt;int&gt;</code></pre>
 </div>
+<div id="a-comparison-of-site-preferences-of-two-species-of-lizard-lizards" class="section level2">
+<h2>A Comparison of Site Preferences of Two Species of Lizard
+(lizards)</h2>
+<p><strong>Q5 Determine which Site and Diameter combination has the
+highest total grahami. Determina cuál combinación de Sitio y Diámetro
+tiene el total de grahami más alto.</strong></p>
+<pre class="r"><code>lizards %&gt;%
+  group_by(Site, Diameter) %&gt;%
+  summarise(total_grahami = sum(grahami)) %&gt;% 
+  arrange(desc(total_grahami))</code></pre>
+<pre><code>## `summarise()` has grouped output by &#39;Site&#39;. You can override using the
+## `.groups` argument.</code></pre>
+<pre><code>## # A tibble: 4 × 3
+## # Groups:   Site [2]
+##   Site  Diameter total_grahami
+##   &lt;fct&gt; &lt;fct&gt;            &lt;dbl&gt;
+## 1 Shade D &lt;= 2             220
+## 2 Shade D &gt; 2              122
+## 3 Sun   D &lt;= 2              65
+## 4 Sun   D &gt; 2               24</code></pre>
+</div>
 
 
 
