@@ -479,6 +479,30 @@ tormentas que ocurrieron cada año.</strong></p>
 ##  9  1983         88
 ## 10  1984        342
 ## # ℹ 38 more rows</code></pre>
+<p><strong>Q4 Use filter() to subset storms to only storms with wind
+speeds greater than 50 knots, then use arrange() to sort by wind
+descending. Filtra el dataset para quedarte solo con tormentas que
+tengan velocidad de viento mayor a 50 nudos, y luego ordénalas de mayor
+a menor velocidad de viento.</strong></p>
+<pre class="r"><code>storms %&gt;%
+  filter(wind &gt; 50) %&gt;% 
+  arrange(desc(wind))</code></pre>
+<pre><code>## # A tibble: 6,991 × 13
+##    name     year month   day  hour   lat  long status    category  wind pressure
+##    &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;        &lt;dbl&gt; &lt;int&gt;    &lt;int&gt;
+##  1 Allen    1980     8     7    18  21.8 -86.4 hurricane        5   165      899
+##  2 Gilbert  1988     9    14     0  19.7 -83.8 hurricane        5   160      888
+##  3 Wilma    2005    10    19    12  17.3 -82.8 hurricane        5   160      882
+##  4 Dorian   2019     9     1    16  26.5 -77   hurricane        5   160      910
+##  5 Dorian   2019     9     1    18  26.5 -77.1 hurricane        5   160      910
+##  6 Allen    1980     8     5    12  15.9 -70.5 hurricane        5   155      932
+##  7 Allen    1980     8     7    12  21   -84.8 hurricane        5   155      910
+##  8 Allen    1980     8     8     0  22.2 -87.9 hurricane        5   155      920
+##  9 Allen    1980     8     9     6  25   -94.2 hurricane        5   155      909
+## 10 Gilbert  1988     9    14     6  19.9 -85.3 hurricane        5   155      889
+## # ℹ 6,981 more rows
+## # ℹ 2 more variables: tropicalstorm_force_diameter &lt;int&gt;,
+## #   hurricane_force_diameter &lt;int&gt;</code></pre>
 </div>
 
 

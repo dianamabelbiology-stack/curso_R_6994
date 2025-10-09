@@ -60,3 +60,11 @@ storms %>%
   summarise(num_storms = n())
 ```
 
+**Q4 Use filter() to subset storms to only storms with wind speeds greater than 50 knots, then use arrange() to sort by wind descending. Filtra el dataset para quedarte solo con tormentas que tengan velocidad de viento mayor a 50 nudos, y luego ordénalas de mayor a menor velocidad de viento.**
+
+```{r}
+storms %>%
+  filter(wind > 50) %>% 
+  arrange(desc(wind))
+```
+
