@@ -69,5 +69,10 @@ Laboratories*
 
 ### [Mid-term](Midterm_Exam.html)
 
+### [Grafica en clase]
+
+![grafico en clase](C:\Users\admin\Desktop\escritorio 30-10-2025\Proyecto R\curso_R_6994\plot.png)
+
+
 ## Ensayo de hoy 
 
