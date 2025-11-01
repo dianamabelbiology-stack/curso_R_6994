@@ -69,7 +69,9 @@ Laboratories*
 
 ### [Mid-term](Midterm_Exam.html)
 
-### [Grafico ggplot asigment](Assigments/Grafico-ggplot-boxplot.html")
+### [Grafico ggplot asigment](Assigments/Grafico-ggplot-boxplot.html)
+
+Assigments\Grafico-ggplot-boxplot.html
 
 ### [Grafica en clase]
 
