@@ -1,0 +1,13 @@
+---
+title: "Grafico ggplot-boxplot"
+author: "Diana Marcela Beltrán Pedroza"
+date: "2025-11-01"
+output: html_document
+---
+
+
+
+```{r}
+![grafico en clase](C:\Users\admin\Desktop\Proyecto R\curso_R_6994\plot.png)
+
+```

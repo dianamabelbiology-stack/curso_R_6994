@@ -71,8 +71,13 @@ Laboratories*
 
 ### [Grafica en clase]
 
-![grafico en clase](C:\Users\admin\Desktop\escritorio 30-10-2025\Proyecto R\curso_R_6994\plot.png)
+![grafico en clase](C:\Users\admin\Desktop\Proyecto R\curso_R_6994\plot.png)
 
 
-## Ensayo de hoy 
+## Análisis de Resultados
+Se analizaron los datos correspondientes al desempeño de cuatro marcas de neumáticos. Los resultados se visualizaron mediante un diagrama de cajas (boxplot) elaborado con la librería ggplot2, lo que permitió observar la dispersión y posibles diferencias entre las marcas.
+
+Posteriormente, se aplicó un ANOVA de una vía con el fin de determinar si existían diferencias estadísticamente significativas entre los promedios de desempeño. A continuación, se evaluaron los residuos del modelo mediante la prueba de normalidad de Shapiro-Wilk, verificándose que éstos se encontraban aproximadamente distribuidos de forma normal, lo cual respalda la validez del análisis de varianza.
+
+Finalmente, se realizó la prueba post-hoc de Tukey, identificándose diferencias significativas entre las marcas. Los resultados indicaron que la marca Bridgestone presentó el mayor desempeño, mientras que las marcas Apolo y Falken mostraron los valores más bajos de desempeño.
 
