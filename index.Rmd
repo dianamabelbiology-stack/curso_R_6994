@@ -69,6 +69,8 @@ Laboratories*
 
 ### [Mid-term](Midterm_Exam.html)
 
+### [Grafico ggplot asigment](Assigments\Grafico-ggplot-boxplot.html")
+
 ### [Grafica en clase]
 
 ![grafico en clase](C:\Users\admin\Desktop\Proyecto R\curso_R_6994\plot.png)
