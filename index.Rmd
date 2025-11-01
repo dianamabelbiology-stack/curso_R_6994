@@ -74,6 +74,7 @@ Laboratories*
 ![grafico en clase](C:\Users\admin\Desktop\Proyecto R\curso_R_6994\plot.png)
 
 
+
 ## Análisis de Resultados
 Se analizaron los datos correspondientes al desempeño de cuatro marcas de neumáticos. Los resultados se visualizaron mediante un diagrama de cajas (boxplot) elaborado con la librería ggplot2, lo que permitió observar la dispersión y posibles diferencias entre las marcas.
 
