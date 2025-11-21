@@ -1,8 +1,8 @@
 ---
-title: "Homework 5"
+title: "Homework 5.0"
 author: "Diana Marcela Beltrán Pedroza"
 date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
-output:
+output: html_document
 ---
 
 ```{r}
@@ -24,5 +24,4 @@ head(metabric[, 1:5])
 ggplot(metabric, aes(x = type_of_breast_surgery,
                      y = tumor_size)) +
   geom_boxplot()
-
 ```
