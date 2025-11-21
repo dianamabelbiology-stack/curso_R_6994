@@ -1,0 +1,34 @@
+---
+title: "Homework 5"
+author: "Diana Marcela Beltrán Pedroza"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output: html_document
+---
+
+```{r}
+library(readr)
+library(ggplot2)
+
+#install.packages("janitor")
+library(janitor)
+
+library(dplyr)
+```
+
+
+
+```{r}
+metabric <- read.csv("data/brca_metabric_clinical_data_1.csv") %>%
+  clean_names()
+
+head(metabric[, 1:5])
+
+```
+
+```{r}
+ggplot(metabric, aes(x = type_of_breast_surgery,
+                     y = tumor_size)) +
+  geom_boxplot()
+
+```
+

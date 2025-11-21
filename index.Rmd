@@ -71,7 +71,7 @@ Laboratories*
 
 ### [Grafico ggplot asigment](Assigments/Grafico-ggplot-boxplot.html)
 
-Assigments\Grafico-ggplot-boxplot.html
+
 
 ### [Grafica en clase]
 

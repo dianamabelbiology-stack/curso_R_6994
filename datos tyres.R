@@ -30,14 +30,14 @@ p <- ggplot(tyre, aes(x=Brands, y=Mileage)) +
         axis.text.x = element_text(size = 14,
                                    face = "plain",
                                    color = "black")) +
-  #theme legend
+  # theme legend
   
 theme(legend.title =element_text(size = 18,
                                  face = "plain",
                                  color = "red")) + 
   
 
-  ylim(10,100)
+  coord_cartesian(ylim = c(100, 1000))
 
 # ANOVA-------------------------------------------------------
 mod <- aov(Mileage ~ Brands, data = tyre)
@@ -52,7 +52,7 @@ car::leveneTest(Mileage ~ Brands, data=tyre)
 
 TukeyHSD(mod)
 
-# safe plot--------------------------------------------------------------}
+# safe plot--------------------------------------------------------------
 p
 ggsave(filename = "plot.png",
        plot = p,
