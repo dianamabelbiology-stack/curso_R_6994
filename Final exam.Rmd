@@ -1,0 +1,40 @@
+---
+title: "Final Exam"
+author: "Diana Marcela Beltrán Pedroza"
+date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r}
+install.packages("palmerpenguins")
+```
+```{r}
+# install.packages("remotes")
+remotes::install_github("allisonhorst/palmerpenguins")
+```
+
+```{r}
+library(palmerpenguins)
+data(package = 'palmerpenguins')
+```
+
+```{r}
+head(penguins)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(palmerpenguins)
+```
+
+```{r}
+penguins <- penguins
+
+head(penguins)
+```
+
+
