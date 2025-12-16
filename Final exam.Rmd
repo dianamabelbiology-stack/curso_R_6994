@@ -3,17 +3,16 @@ title: "Final Exam"
 author: "Diana Marcela Beltrán Pedroza"
 date: "`r format(Sys.time(), '%Y-%b-%d, %I:%M %p')`"
 output:
-  pdf_document: default
   html_document: default
 ---
 
 
 ```{r}
-install.packages("palmerpenguins")
+#install.packages("palmerpenguins")
 ```
 ```{r}
 # install.packages("remotes")
-remotes::install_github("allisonhorst/palmerpenguins")
+# remotes::install_github("allisonhorst/palmerpenguins")
 ```
 
 ```{r}
@@ -36,5 +35,67 @@ penguins <- penguins
 
 head(penguins)
 ```
+**pregunta 1. Crea un gráfico de dispersión usando geom_point() que muestre la relación entre bill_length_mm y bill_depth_mm usando el dataset penguins.** 
+```{r}
+ggplot(penguins,
+aes(x = flipper_length_mm,
+y = body_mass_g, color=species)) +
+geom_point()
+
+```
+
+**Pregunta 2. Partiendo del gráfico anterior y usando un código similar, modifica el gráfico de dispersión para colorear los puntos por species.**
+
+```{r}
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) +
+  geom_point() 
+```
+
+**Pregunta 3. Partiendo del gráfico anterior y usando un código similar, modifica el gráfico de dispersión para crear paneles separados por species.**
+
+```{r}
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) +
+  geom_point() + 
+  facet_wrap(~ species)
+```
+
+**Pregunta 4. Partiendo del gráfico anterior y usando un código similar, añade una línea de suavizado para cada especie.**
+
+```{r}
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) +
+  geom_point() + 
+  facet_wrap(~ species) + 
+  geom_smooth(method = "lm", )
+```
+
+**Pregunta 5.Partiendo del gráfico que creaste en la Pregunta 1, modifícalo para que sea apto para publicación mejorando al menos tres aspectos.**
+
+```{r}
+ggplot(data = penguins,
+       aes(x = flipper_length_mm,
+           y = body_mass_g,
+           color = species)) +
+  geom_point() + 
+  facet_wrap(~ species) + 
+  geom_smooth(method = "lm", ) +
+  theme_light() + 
+  labs(title = "palmerpenguins", 
+x = "Flipper lenght (mm)",
+y = "Body mass (g)",
+fill = "Surgery Type") + 
+  theme(text = element_text(size = 14),
+axis.text.x = element_text(angle = 0))
+```
+
+
 
 
