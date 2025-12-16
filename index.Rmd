@@ -75,7 +75,7 @@ Laboratories*
 
 ## FINAL EXAM
 
-
+### [Palmerpenguins](Final-exam.html)
 
 ### [Grafica en clase]
 
